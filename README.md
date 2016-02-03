@@ -10,5 +10,5 @@ Ansible role to install and configure Java.
     java_package: openjdk-8-jdk
 
   roles:
-    - ogonna.iwunze.java
+    - wunzeco.java
 ```
