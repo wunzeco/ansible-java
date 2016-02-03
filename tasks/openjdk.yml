@@ -1,0 +1,6 @@
+---
+- name: Add OpenJDK APT repository
+  apt_repository: repo='ppa:openjdk-r/ppa'
+
+- name: Instal OpenJDK Java
+  apt: name={{ java_package }} state=present
