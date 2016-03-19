@@ -7,6 +7,6 @@
 - name: Add Oracle JDK APT repository
   apt_repository: repo='ppa:webupd8team/java'
 
-- name: Instal Oracle JDK Java
+- name: Install Oracle JDK Java
   apt: name="{{ java_package }}" state=present
 

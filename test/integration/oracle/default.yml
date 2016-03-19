@@ -1,0 +1,8 @@
+---
+- hosts: test-kitchen
+
+  vars:
+    java_package: oracle-java8-installer
+
+  roles:
+    - ansible-java
