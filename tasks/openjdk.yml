@@ -4,3 +4,8 @@
 
 - name: Instal OpenJDK Java
   apt: name={{ java_package }} state=present
+
+  # Apply workaround for bug reported in:
+  #   https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/1396760
+- name: Configure ca-certificates-java
+  shell: /var/lib/dpkg/info/ca-certificates-java.postinst configure

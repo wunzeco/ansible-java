@@ -12,3 +12,13 @@ Ansible role to install and configure Java.
   roles:
     - wunzeco.java
 ```
+
+
+## Testing
+
+Run `kitchen test` command to test this repo
+
+
+## Dependencies
+
+none
