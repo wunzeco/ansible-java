@@ -1,11 +1,22 @@
 ---
-- name: Add OpenJDK APT repository
-  apt_repository: repo='ppa:openjdk-r/ppa'
 
-- name: Instal OpenJDK Java
+## Debian
+- name: Add OpenJDK APT repository | Debian
+  apt_repository: repo='ppa:openjdk-r/ppa'
+  when: ansible_os_family|lower == 'debian'
+
+- name: Instal OpenJDK Java | Debian
   apt: name={{ java_package }} state=present
+  when: ansible_os_family|lower == 'debian'
 
   # Apply workaround for bug reported in:
   #   https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/1396760
-- name: Configure ca-certificates-java
+- name: Configure ca-certificates-java | Debian
   shell: /var/lib/dpkg/info/ca-certificates-java.postinst configure
+  when: ansible_os_family|lower == 'debian'
+
+
+##  RedHat
+- name: Instal OpenJDK Java | RedHat
+  yum: name={{ java_package }} state=present
+  when: ansible_os_family|lower == 'redhat'

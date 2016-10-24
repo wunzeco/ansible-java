@@ -1,5 +1,11 @@
 ---
 - hosts: test-kitchen
 
+  vars:
+    java_package_by_os:
+      debian: openjdk-8-jdk
+      redhat: java-1.8.0-openjdk
+    java_package: "{{ java_package_by_os[ansible_os_family|lower] }}"
+
   roles:
     - ansible-java
