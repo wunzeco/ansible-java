@@ -1,6 +1,6 @@
 ---
 java_package: openjdk-8-jdk   # OR oracle-java8-installer
 
-java_oracle_rpm_download_url: "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm"
+java_oracle_rpm_download_url: "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm"
 java_oracle_rpm_package:      "{{ java_oracle_rpm_download_url.split('/')|last }}"
 java_oracle_rpm_download_dir: /var/tmp
