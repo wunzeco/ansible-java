@@ -25,7 +25,7 @@
   when: ansible_os_family|lower == 'redhat'
 
 - name: Install Oracle JDK Java | RedHat
-  yum: 
+  yum:
     name:  "{{ java_oracle_rpm_download_dir }}/{{ java_oracle_rpm_package }}"
     state: present
   when: ansible_os_family|lower == 'redhat'
