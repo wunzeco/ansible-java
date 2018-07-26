@@ -1,5 +1,5 @@
 ---
 - set_fact: java_platform=oracle
-  when: java_package | match("oracle*")
+  when: java_package is match("oracle*")
 
 - include_tasks: "{{ java_platform|default('openjdk') }}.yml"
